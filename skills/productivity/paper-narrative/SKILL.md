@@ -1,12 +1,14 @@
 ---
 name: paper-narrative
-description: Revise the narrative layer of a scientific manuscript — abstract, introduction, conclusions — without touching the science, by calibrating against the target field's own papers.
+description: Revise a scientific manuscript as narrative — the abstract, introduction and conclusions as narrative, the results, figures and discussion as evidence — without touching the science, by calibrating against the target field's own papers.
 disable-model-invocation: true
 ---
 
 Revise how a manuscript **tells** its story, leaving what it **claims** untouched. The science is the user's: numbers, formulas, conclusions, and scope stay exactly as written. What changes is the arrangement, the resolution, and the framing.
 
 Run the passes in order. Each pass ends on a criterion you can check.
+
+Passes 1–4 work the **narrative layer** (abstract, introduction, conclusions): the sections that state the claim, motivate it, and close on it. Pass 5 works the **evidence layer** (results, figures, discussion): the sections that carry the proof. The two layers fail differently, so they are diagnosed differently — do not stretch a narrative rule over an evidence section. "The abstract leaks the step size" and "Results repeats its figure captions" are both narrative problems, but the second is not a leak.
 
 ## Pass 1 — Resolution
 
@@ -46,6 +48,18 @@ Set the claim once, then **echo** it at rising resolution — the abstract asser
 
 *Done when:* the subject and the demonstration are distinguishable in every high-level section, and the central claim appears in the abstract, introduction, and conclusions at three different resolutions.
 
+## Pass 5 — Evidence
+
+The narrative layer decides what is claimed; the evidence layer has to deliver it readably. A results section can be scientifically complete and still fail its reader — by making them assemble the finding from a figure, by hiding the point in a neutral heading, by restating in prose what the caption already said. Three tests, run over the sections that carry proof:
+
+**Headings carry the finding.** A results heading is a sentence a reader can read alone and learn something ("Supervising slopes cuts the error to 9.5% at no static cost"), not a label ("Slope results"). Scan every heading in the results and discussion sections; each one should survive being read out of context.
+
+**Captions stand alone.** A reader who jumps to a figure first should get its finding without the surrounding prose, and a reader who reads the prose should gain something the caption did not already give. Check both directions: a caption that only names the axes fails the first, prose that repeats the caption's sentences fails the second.
+
+**Discussion rises.** The discussion earns its place by answering a question the results cannot: what the finding means, where its boundary is, what it does not license. Re-reading the results in different words, or restating the numbers, is a failure — the numbers already have a home. Each discussion paragraph should be traceable to a question the introduction left open, or to a limitation the results exposed.
+
+*Done when:* every heading states a finding, every caption is self-sufficient and non-duplicative of its body text, and every discussion paragraph answers a question that the results section cannot answer on its own.
+
 ## Constraints
 
 **Revise the telling, not the claims.** Numbers, formulas, derived conclusions, and scope statements stay as written. When a sentence needs a number changed, that is a scientific decision — surface it and stop.
@@ -54,4 +68,4 @@ Set the claim once, then **echo** it at rising resolution — the abstract asser
 
 ## Reporting
 
-Close with the changes grouped by exactly what moved: what was relocated and where, which skeleton slots were missing and how they were filled, how the framing was settled, and which details were left alone because they belong to the science.
+Close with the changes grouped by exactly what moved: what was relocated and where, which skeleton slots were missing and how they were filled, how the framing was settled, which headings and captions were rewritten under Pass 5, and which details were left alone because they belong to the science.
