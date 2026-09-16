@@ -28,8 +28,6 @@ Collect 5–10 recent papers of the target type and venue. Local assets first �
 
 Lay your draft against the skeleton slot by slot. The gap is the finding: a draft missing its "pain point" slot does not read as incomplete, it reads as unmotivated — the reader meets the solution before learning what needs solving.
 
-[`references/skeletons.md`](references/skeletons.md) holds a skeleton already recovered this way, with the recovery procedure and one worked field as evidence of what the method yields. Read it to see the shape of the output; recover the target field's skeleton fresh regardless — a recorded skeleton is a hypothesis to test, not a template to apply.
-
 *Done when:* you can name each slot of the field's skeleton and point to the sentence in the draft that fills it, or record the slot as missing.
 
 ## Pass 3 — Contest
